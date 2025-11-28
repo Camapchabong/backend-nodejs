@@ -29,15 +29,25 @@
                 <tbody>
                     <% users.forEach( function (user) { %>
                         <tr>
-                            <td><%= user.id %></td>
-                            <td><%= user.name %></td>
-                            <td><%= user.email %></td>
-                            <td><%= user.address %></td>
                             <td>
-                                <button class="btn btn-danger">Delete</button>
+                                <%= user.id %>
+                            </td>
+                            <td>
+                                <%= user.name %>
+                            </td>
+                            <td>
+                                <%= user.email %>
+                            </td>
+                            <td>
+                                <%= user.address %>
+                            </td>
+                            <td>
+                                <form action="/handle-delete-user/<%= user.id %>" method="post">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                             </td>
                         </tr>
-                    <% }) %>
+                        <% }) %>
                 </tbody>
             </table>
         </div>
