@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,21 +16,18 @@
         <form action="/handle-create-user" method="post">
             <div class="mb-3">
                 <label class="form-label">Name:</label>
-                <input value="<%= user.name %>" name="fullName" type="text" class="form-control"
-                    placeholder="Your name">
+                <input name="fullName" type="text" class="form-control" placeholder="Your name" value="<%= user.name %>">
             </div>
             <div class="mb-3">
                 <label class="form-label">Email:</label>
-                <input value="<%= user.email %>" name="email" type="email" class="form-control"
-                    placeholder="examle@gmail.com">
+                <input name="email" type="email" class="form-control" placeholder="example@gmail.com" value="<%= user.email %>">
             </div>
             <div class="mb-3">
                 <label class="form-label">Address:</label>
-                <textarea value="<%= user.address %>" name="address" class="form-control" rows="2"></textarea>
+                <textarea name="address" class="form-control" rows="2"><%= user.address %></textarea>
             </div>
             <button type="submit" class="btn btn-warning">Submit</button>
         </form>
     </div>
 </body>
-
 </html>
