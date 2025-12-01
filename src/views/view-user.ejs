@@ -13,7 +13,8 @@
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>Xin chào!</strong> Đây là một cảnh báo từ Bootstrap.
         </div>
-        <form action="/handle-create-user" method="post">
+        <form action="/handle-update-user" method="post">
+            <input style="display: none;" name="id" value="<%= user.id %>">
             <div class="mb-3">
                 <label class="form-label">Name:</label>
                 <input name="fullName" type="text" class="form-control" placeholder="Your name" value="<%= user.name %>">
@@ -26,7 +27,7 @@
                 <label class="form-label">Address:</label>
                 <textarea name="address" class="form-control" rows="2"><%= user.address %></textarea>
             </div>
-            <button type="submit" class="btn btn-warning">Submit</button>
+            <button type="submit" class="btn btn-warning">Update</button>
         </form>
     </div>
 </body>
